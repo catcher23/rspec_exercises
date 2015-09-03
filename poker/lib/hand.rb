@@ -1,0 +1,2 @@
+require 'deck'
+class Hand
