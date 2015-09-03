@@ -109,7 +109,11 @@ describe Hand do
     end
     context "when hand is a No Hand" do
       it "returns :no_hand" do
-
+        let(:sample_deck) { double ("sample_deck"), draw(5):
+          [Card.new(:clubs, :ace), Card.new(:diamonds, :ace),
+           Card.new(:spades, :nine), Card.new(:hearts, :nine),
+           Card.new(:clubs, :ten)] }
+        expect(Hand.new(sample_deck).poker_hand).to eq(:two_pairs)
       end
     end
   end
